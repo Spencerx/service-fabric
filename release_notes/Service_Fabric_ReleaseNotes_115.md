@@ -4,7 +4,7 @@ This release will only be available through Auto upgrades. Clusters set to autom
 
 ## Contents
 * [Service Fabric Packages and Versions](#service-fabric-packages-and-versions)
-* [Service Fabric Feature and Bug Fixes](#service-fabric-feature-and-bug-fixes)
+* [Service Fabric Features and Bug Fixes](#service-fabric-features-and-bug-fixes)
 * [Retirement and Deprecation Path Callouts](#retirement-and-deprecation-path-callouts)
 * [Repositories and Download Links](#repositories-and-download-links)
 
@@ -14,13 +14,20 @@ Packages and versions are listed with the most recent version listed first.
 
 The following packages and versions are part of this release:
 
+### Service Fabric 11.5.122
+| **Service** | **Platform** | **Version** |
+|---|---|---|
+| [Service Fabric Runtime](https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabric.11.5.122.1.exe) | Windows <br> Windows ARM64 | 11.5.122.1 <br> 11.5.122.2 |
+| [Service Fabric for Windows Server](https://download.microsoft.com/download/8/3/6/836e3e99-a300-4714-8278-96bc3e8b5528/11.5.122.1/Microsoft.Azure.ServiceFabric.WindowsServer.11.5.122.1.zip) | Service Fabric Standalone Installer Package | 11.5.122.1 |
+| [.NET SDK](https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabricSDK.8.5.122.msi) | Windows .NET SDK <br> Microsoft.ServiceFabric <br> Reliable Services and Reliable Actors <br> ASP.NET Core Service Fabric integration | 8.5.122 <br> 11.5.122.1 <br> 8.5.122 <br> 8.5.122 |
+
 ### Service Fabric 11.5.116
 
 | **Service** | **Platform** | **Version** |
 |---|---|---|
-| [Service Fabric Runtime](https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabric.11.5.116.1.exe) | Windows <br> Windows ARM64 | 11.5.116.1 <br> 11.5.116.2 |
-| [Service Fabric for Windows Server](https://download.microsoft.com/download/8/3/6/836e3e99-a300-4714-8278-96bc3e8b5528/11.5.116.1/Microsoft.Azure.ServiceFabric.WindowsServer.11.5.116.1.zip) | Service Fabric Standalone Installer Package | 11.5.116.1 |
-| [.NET SDK](https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabricSDK.8.5.116.msi) | Windows .NET SDK <br> Microsoft.ServiceFabric <br> Reliable Services and Reliable Actors <br> ASP.NET Core Service Fabric integration | 8.5.116 <br> 11.5.116.1 <br> 8.5.116 <br> 8.5.116 |
+| Service Fabric Runtime | Windows <br> Windows ARM64 | 11.5.116.1 <br> 11.5.116.2 |
+| Service Fabric for Windows Server | Service Fabric Standalone Installer Package | 11.5.116.1 |
+| .NET SDK | Windows .NET SDK <br> Microsoft.ServiceFabric <br> Reliable Services and Reliable Actors <br> ASP.NET Core Service Fabric integration | 8.5.116 <br> 11.5.116.1 <br> 8.5.116 <br> 8.5.116 |
 
 ### Service Fabric 11.5.111
 
@@ -42,17 +49,21 @@ The following packages and versions are part of this release:
 
 * In Service Fabric 11.5, Microsoft.ServiceFabric.ReliableCollection.Store.KeyValueTuple<T> is marked obsolete and in Service Fabric 12 it will no longer be available to customer applications. Customers should move to System.Tuple and remove Microsoft.ServiceFabric.Data.Extensions references.
 
-## Service Fabric Feature and Bug Fixes
+## Service Fabric Features and Bug Fixes
 
 Features and bug fixes are listed by the version in which they were introduced, with the most recent version listed first.
 
 The following features and bug fixes are part of this release:
 
+### Service Fabric 11.5.122 Features and Bug Fixes
+
+11.5.122 delivers stability fixes.
+
 ### Service Fabric 11.5.116 Features and Bug Fixes
 
 | **Type** | **Overview** | **Description** |
 |---|---|---|
-| Bug | Version incompatibility between 11.4 and 11.5.111 | **Brief Description:** Applications built with Service Fabric SDK 11.4 crash when Service Fabric runtime is upgraded to 11.5.111 due to breaking change in COM interfaces. <br> **Feature/Bug Impact:** Service Fabric upgrade to 11.5 cannot be completed with default upgrade policies. If upgrade bypasses default policies, applications built with Service Fabric SDK 11.4 will fail to run. <br> **Solution/Fix:** Service Fabric runtime 11.5.116.1 runs applications built with SDK 11.4 successfully. <br> **Workaround:** Rebuild applications with Service Fabric SDK 11.3. |
+| Bug Fix | Version incompatibility between 11.4 and 11.5.111 | **Brief Description:** Applications built with Service Fabric SDK 11.4 crash when Service Fabric runtime is upgraded to 11.5.111 due to breaking change in COM interfaces. <br> **Feature/Bug Impact:** Service Fabric upgrade to 11.5 cannot be completed with default upgrade policies. If upgrade bypasses default policies, applications built with Service Fabric SDK 11.4 will fail to run. <br> **Solution/Fix:** Service Fabric runtime 11.5.116.1 runs applications built with SDK 11.4 successfully. <br> **Workaround:** Rebuild applications with Service Fabric SDK 11.3. |
 
 ### Service Fabric 11.5.111 Features and Bug Fixes
 
@@ -81,19 +92,19 @@ Follow this guidance for setting up your developer environment:
 * [Getting Started with Mac](https://docs.microsoft.com/azure/service-fabric/service-fabric-get-started-mac)
 * [Getting Started with Windows](https://docs.microsoft.com/azure/service-fabric/service-fabric-get-started)
 
-### Service Fabric 11.5.116 Repositories and Download Links
+### Service Fabric 11.5.122 Repositories and Download Links
 
 Runtime:
-https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabric.11.5.116.1.exe
+https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabric.11.5.122.1.exe
 
 SDK:
-https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabricSDK.8.5.116.msi
+https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabricSDK.8.5.122.msi
 
 Cab:
-https://download.microsoft.com/download/b/0/b/b0bccac5-65aa-4be3-ab13-d5ff5890f4b5/11.5.116.1/MicrosoftServiceFabric.11.5.116.1.cab
+https://download.microsoft.com/download/b/0/b/b0bccac5-65aa-4be3-ab13-d5ff5890f4b5/11.5.122.1/MicrosoftServiceFabric.11.5.122.1.cab
 
 Package:
-https://download.microsoft.com/download/8/3/6/836e3e99-a300-4714-8278-96bc3e8b5528/11.5.116.1/Microsoft.Azure.ServiceFabric.WindowsServer.11.5.116.1.zip
+https://download.microsoft.com/download/8/3/6/836e3e99-a300-4714-8278-96bc3e8b5528/11.5.122.1/Microsoft.Azure.ServiceFabric.WindowsServer.11.5.122.1.zip
  
 Goalstate:
-https://download.microsoft.com/download/7/d/1/7d1d1511-59a4-4933-8187-40c20065aa29/11.5.116.1/goalstate.11.5.116.1.json
+https://download.microsoft.com/download/7/d/1/7d1d1511-59a4-4933-8187-40c20065aa29/11.5.122.1/goalstate.11.5.122.1.json
